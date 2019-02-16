@@ -1,0 +1,12 @@
+<% include ./partials/header.ejs %>
+
+<h1 class="color-white">Register here</h1>
+<form action="/createAccount" method="post">
+    <input type="text" name="username" placeholder="User name">
+    <input type="password" name="password" placeholder="Password">
+    <input type="text" placeholder="Name" name="name">
+    <input type="text" placeholder="City" name="name">
+    <button type="submit">Submit</button>
+</form>
+
+<% include ./partials/footer.ejs %>

@@ -1,0 +1,46 @@
+.blog-style{
+    margin-top: 20px;
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+}
+
+.btn{
+    padding: 5px;
+    margin: 10px;
+}
+
+.home-image{
+    height: 200px;
+}
+
+.view-image{
+    height: 300px;
+}
+
+.background{
+    background-color: black;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.form-heading {
+    border: 1px solid gray;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+label{
+    color: white;
+}
+.color-white{
+    color: white;
+}
+
+.fa-trash-alt{
+    color: red;
+    font-size: 2em;
+    margin-left: 5px;
+}

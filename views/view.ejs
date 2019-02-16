@@ -1,0 +1,45 @@
+<% include ./partials/header.ejs %>
+
+  <div class="container">
+    <div class="blog-style">
+        <% if(blog.creator) { %>
+        <div class="row">
+            <a href="/users/<%= blog.creator._id %>"><h3 class="col-lg-6 col-sm-12"><%= blog.creator.username %></h3></a>
+        </div>
+        <% } %>
+
+        <div class="row">
+            <h3 class="col-lg-12 col-sm-12"><%= blog.title %></h3>
+        </div>
+
+        <div class="row">
+            <p class="col-sm-12"><%= blog.description %></p>
+        </div>
+
+        <div class="row">
+            <img class="thumbnails view-image col-lg-6 col-md-6 col-sm-12" src= <%= blog.image %> >
+        </div>
+
+        <div class="row">
+            <p class="col-lg-6 col-sm-12"><%= blog.createdAt %> </p>
+        </div>
+
+        <div class="row align-center">
+            <a href="/blogs/<%= blog.id %>/edit" class="btn btn-primary col-lg-1 col-md-1 col-sm-2">Edit</a>
+            <a href="/blogs/<%= blog.id %>/addComment" class="btn btn-primary col-lg-1 col-md-1 col-sm-2">Add Comment</a>
+            <a href="/delete/<%= blog.id %>" class="btn btn-default col-lg-1 col-md-1 col-sm-2"><i class="fas fa-trash-alt"></i></a>
+        </div>
+
+        <div>
+            <% for (var i = 0 ; i < blog.comments.length ; i++) { %>
+                <div class="row">
+                    <p class="col-md-12 col-lg-12 col-sm-12"><%= blog.comments[i].creator.username %> </p>
+                    <p class="col-md-12 col-lg-12 col-sm-12"><%= blog.comments[i].text %> </p>
+                </div>
+                <br>
+            <% } %>
+        </div>
+    </div>
+  </div>
+
+<% include ./partials/footer.ejs %>
